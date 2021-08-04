@@ -1,0 +1,121 @@
+@import '~antd/es/style/themes/default.less';
+
+@pro-header-hover-bg: rgba(0, 0, 0, 0.025);
+
+.menu {
+  color: @primary-color;
+
+  :global(.anticon) {
+    margin-left: 8px;
+  }
+
+  :global(.ant-dropdown-menu-item) {
+    min-width: 160px;
+  }
+}
+
+.ant-menu-dark.ant-menu-horizontal>.ant-menu-item:hover {
+  background-color: transparent;
+}
+
+.right {
+  display    : flex;
+  float      : left;
+  height     : 48px;
+  margin-left: auto;
+  overflow   : hidden;
+
+  .hoverBG {
+    &:hover {
+      background: none !important;
+
+      .dashboard {
+        color: rgb(78, 131, 231) !important;
+
+
+      }
+    }
+  }
+
+  .dashboard {
+    color: white !important;
+
+
+  }
+
+  .action {
+    display    : flex;
+    align-items: center;
+    height     : 48px;
+    padding    : 0 12px;
+    cursor     : pointer;
+    transition : all 0.3s;
+
+    >span {
+      vertical-align: middle;
+    }
+
+    &:hover {
+      // background: @pro-header-hover-bg;
+    }
+
+    &:global(.opened) {
+      // background: @pro-header-hover-bg;
+    }
+  }
+
+  .search {
+    padding: 0 12px;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+
+  .account {
+    .avatar {
+      margin-left   : 8px;
+      color         : @primary-color;
+      vertical-align: top;
+      background    : rgba(255, 255, 255, 0.85);
+    }
+  }
+}
+
+.dark {
+  .action {
+    &:hover {
+      background: #fd0505;
+    }
+
+    &:global(.opened) {
+      background: #f70e0e;
+    }
+  }
+}
+
+@media only screen and (max-width: @screen-md) {
+  :global(.ant-divider-vertical) {
+    vertical-align: unset;
+  }
+
+  .name {
+    display: none;
+  }
+
+  .right {
+    position: absolute;
+    top     : 0;
+    left    : 12px;
+
+    .account {
+      .avatar {
+        margin-left: 8px;
+      }
+    }
+
+    .search {
+      display: none;
+    }
+  }
+}
