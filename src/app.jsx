@@ -123,30 +123,30 @@ const loopMenuItem = (menus) =>
   
 
 export const layout = ({ initialState, setInitialState  }) => {
-  
   return {  
     
     // collapsed,
     collapsed: initialState?.global?.collapsed,
     onCollapse: false,
-    collapsedButtonRender: false,
-    postMenuData:(menuData) => {
-      return [
-        {
-          icon: initialState?.global?.collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />,
-          name: ' ',
-          onTitleClick: () =>
-            setInitialState({
-              ...initialState,
-              global: {
-                collapsed: !initialState?.global?.collapsed,
-              },
-            })
+    // collapsedButtonRender: false,
+    // postMenuData:(menuData) => {
+    //   return [
+    //     {
+    //       className: 'ant-pro-sider-collapsed-button',
+    //       icon: initialState?.global?.collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />,
+    //       name: ' ',
+    //       onTitleClick: () =>
+    //         setInitialState({
+    //           ...initialState,
+    //           global: {
+    //             collapsed: !initialState?.global?.collapsed,
+    //           },
+    //         })
           
-        },
-        ...(menuData || []),
-      ];
-    },
+    //     },
+    //     ...(menuData || []),
+    //   ];
+    // },
     // location : { 
     //   pathname ,
     // } ,

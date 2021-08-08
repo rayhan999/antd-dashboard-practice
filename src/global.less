@@ -68,6 +68,16 @@ body,
 // }
 
 .ant-pro-sider-menu {
+
+  // .ant-menu-submenu,
+  // .ant-menu-submenu.ant-menu-sub.ant-menu-item,
+  // .ant-menu-item {
+  //   color: red !important;
+  // }
+  // .ant-menu-title-content {
+  //   color: red;
+  // }
+
   .ant-menu-item-selected {
     // color: revert;
     color           : rgb(255, 255, 255) !important;
@@ -108,6 +118,24 @@ body,
 .ant-menu-inline-collapsed {
   .ant-pro-menu-item-title {
     display: none;
+  }
+}
+
+.ant-layout-sider-children {
+  // display       : flex !important;
+  flex-direction: column-reverse !important;
+
+  .ant-pro-sider-links {
+    .ant-pro-sider-collapsed-button {
+      border-top   : none !important;
+      border-bottom: 1px solid #f0f0f0;
+
+      &:active {
+        background-color: transparent !important;
+
+      }
+    }
+
   }
 }
 
