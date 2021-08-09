@@ -1,37 +1,47 @@
 @import '~antd/es/style/themes/default.less';
+@import url('https://allfont.net/allfont.css?fonts=roboto-regular');
+
+@font-face {
+  src        : url('./fonts/ADOIF_.PFB.woff');
+  font-family: 'AdobeInvisFont';
+}
+
+@font-face {
+  src        : url('./fonts/Myriad\ Pro\ Regular.woff');
+  font-family: 'MyraidPro-Regular';
+}
 
 html,
 body,
 #root {
-  height  : 100%;
-  position: relative;
-
+  height    : 100%;
+  position  : relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
+
+
 
 .colorWeak {
   filter: invert(80%);
 }
 
 .ant-layout {
-  min-height: 100vh;
-  position  : relative;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  min-height   : 100vh;
+  position     : relative;
+  // overflow-x: hidden;
+  // overflow-y: hidden !important;
 }
 
 .ant-layout::before {
-  content                 : "";
-  // background-image: url('./img/bg.svg') !important;
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
-  // background-size:cover ;
-  background              : linear-gradient(rgba(185, 184, 184, 0.5), rgb(248, 248, 248)), url('./img/bg.svg');
-  background-size         : cover;
-  position                : fixed;
-  top                     : 0px;
-  right                   : 0px;
-  bottom                  : 0px;
-  left                    : 0px;
+  content        : "";
+  background     : linear-gradient(rgba(185, 184, 184, 0.6), rgb(248, 248, 248)), url('./img/back.svg');
+  background-size: cover;
+  position       : fixed;
+  top            : 0px;
+  right          : 0px;
+  bottom         : 0px;
+  left           : 0px;
   // opacity: 0.7;
 }
 
@@ -44,13 +54,14 @@ body,
   }
 
   ::-webkit-scrollbar-track {
-    box-shadow   : inset 0 0 5px grey;
-    border-radius: 10px;
+    box-shadow      : inset 0 0 5px grey;
+    background-color: transparent;
+    border-radius   : 10px;
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: rgb(61, 98, 223);
-    border-radius   : 6px;
+    background-color: #7065ED;
+    border-radius   : 7px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
@@ -58,45 +69,14 @@ body,
   }
 }
 
-// .ant-menu-submenu, .ant-menu-item {
-//   color:rgb(143, 143, 143) !important;
-//   font-weight: bold;
-// }
-// .ant-pro-sider-menu {
-//   color:rgb(150, 150, 150);
-//   font-weight: bold;
-// }
 
-.ant-pro-sider-menu {
+.ant-pro-grid-content {
+  height    : 73vh;
+  padding   : 0 1rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
 
-  // .ant-menu-submenu,
-  // .ant-menu-submenu.ant-menu-sub.ant-menu-item,
-  // .ant-menu-item {
-  //   color: red !important;
-  // }
-  // .ant-menu-title-content {
-  //   color: red;
-  // }
-
-  .ant-menu-item-selected {
-    // color: revert;
-    color           : rgb(255, 255, 255) !important;
-    background-color: rgb(134, 134, 134) !important;
-  }
-
-  .ant-pro-menu-item-title {
-    margin-left: 1rem;
-  }
 }
-
-// .ant-pro-menu-item{
-//   color:rgb(150, 150, 150);
-//   font-weight: bold;
-// }
-// .ant-menu-item:hover{
-//   color:rgb(243, 243, 243) !important;
-//   background-color:rgb(134, 134, 134) ;
-// }
 
 .ant-menu-vertical .ant-menu-item::after,
 .ant-menu-vertical-left .ant-menu-item::after,
@@ -106,13 +86,31 @@ body,
   // border-right: 0px solid #628dea;
 }
 
-.ant-pro-global-footer-links a {
-  color      : black !important;
-  font-weight: bold;
-}
+.ant-layout-footer {
+  height   : 70px;
+  font-size: unset;
 
-.ant-pro-global-footer-copyright {
-  display: none;
+  .ant-pro-global-footer {
+    margin: 10px 0;
+
+    .ant-pro-global-footer-links {
+      margin: 0;
+
+      a {
+        // margin     : 0;
+        font-size  : 10px;
+        color      : black !important;
+        font-weight: bold;
+        height     : 12px !important;
+      }
+    }
+
+    .ant-pro-global-footer-copyright {
+      .anticon {
+        display: none;
+      }
+    }
+  }
 }
 
 .ant-menu-inline-collapsed {
@@ -121,21 +119,114 @@ body,
   }
 }
 
+.ant-pro-fixed-header {
+  height: 44px !important;
+
+  .right___cd9CR {
+    font-family: 'Roboto Regular', 'AdobeInvisFont', 'MyraidPro-Regular';
+    height     : 100%;
+  }
+}
+
 .ant-layout-sider-children {
-  // display       : flex !important;
+  font-family   : 'Roboto Regular', 'AdobeInvisFont', 'MyraidPro-Regular';
   flex-direction: column-reverse !important;
 
-  .ant-pro-sider-links {
-    .ant-pro-sider-collapsed-button {
-      border-top   : none !important;
-      border-bottom: 1px solid #f0f0f0;
 
-      &:active {
-        background-color: transparent !important;
 
+
+  .ant-pro-sider-menu {
+    // width : 450px !important;
+
+    .ant-menu-item-only-child,
+    .ant-menu-submenu .ant-menu-submenu-title {
+      height: 49px;
+      margin: 0 !important;
+    }
+
+    .ant-menu-submenu-inline {
+      .ant-menu-inline {
+        background-color: rgb(216, 211, 211) !important;
       }
     }
 
+    .ant-menu-submenu-active {
+      .ant-menu-submenu-title {
+        background-color: #384967 !important;
+        opacity         : 0.5;
+
+        .ant-pro-menu-item {
+          color: rgb(255, 255, 255) !important;
+        }
+      }
+
+      .ant-menu-submenu-arrow {
+        color: rgb(255, 255, 255) !important;
+      }
+    }
+
+    .ant-menu-item-active {
+      background-color: #384967 !important;
+      opacity         : 0.5;
+
+      .ant-pro-menu-item {
+        color: rgb(255, 255, 255) !important;
+      }
+    }
+
+    .ant-pro-menu-item,
+    .ant-menu-submenu-arrow {
+      color       : #666666;
+      // height   : 14px;
+      font-size   : 18px;
+    }
+
+    .ant-menu-item-selected {
+      background-color: #384967 !important;
+      opacity         : 0.5;
+
+      .ant-pro-menu-item {
+        // color: revert;
+        color: rgb(255, 255, 255) !important;
+      }
+    }
+
+    .ant-pro-menu-item-title {
+      margin-left: 1rem;
+    }
+  }
+
+  .ant-pro-sider-links {
+    .ant-pro-sider-link-menu {
+      .ant-pro-sider-collapsed-button {
+        border-top   : none !important;
+        border-bottom: 1px solid #f0f0f0;
+        height       : 49px;
+        color        : #142034;
+        padding      : unset;
+        margin       : unset;
+        display      : flex;
+        align-items  : center;
+        padding-left : 12px !important;
+
+        &:active {
+          background-color: unset !important;
+
+        }
+
+        .ant-menu-title-content {
+          // border: 1px solid red;
+
+          span {
+            width         : 26px;
+            font-size     : 28px;
+            // border     : 1px solid red;
+            display       : flex;
+            align-items   : center
+          }
+        }
+      }
+    }
   }
 }
 
@@ -189,13 +280,14 @@ ol {
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow   : inset 0 0 5px grey;
-  border-radius: 10px;
+  box-shadow      : inset 0 0 5px grey;
+  background-color: transparent;
+  border-radius   : 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(61, 98, 223);
-  border-radius   : 6px;
+  background-color: #7065ED;
+  border-radius   : 7px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

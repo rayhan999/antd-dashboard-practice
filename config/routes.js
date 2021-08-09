@@ -37,19 +37,19 @@ export default [
     icon: 'dashboard',
     routes: [
       {
-        name: 'analysis',
+        name: 'Analysis',
         icon: 'smile',
         path: '/dashboard/analysis',
         component: './welcome',
       },
       {
-        name: 'monitor',
+        name: 'Monitor',
         icon: 'smile',
         path: '/dashboard/monitor',
         component: './practiceDashboard',
       },
       {
-        name: 'workplace',
+        name: 'Workplace',
         icon: 'smile',
         path: '/dashboard/workplace',
         component: './welcome',
@@ -82,7 +82,7 @@ export default [
   },
   {
     path: '/orders',
-    name: 'orders',
+    name: 'Orders',
     icon: 'tag',
     component: './welcome',
   },

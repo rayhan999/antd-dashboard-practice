@@ -11,7 +11,7 @@ export default () => {
   (<div>
   </div>)
   ;
-  const itcl = (<img  src="https://www.assignmentpoint.com/wp-content/uploads/2018/01/IT-Consultants-Limited.jpg" width={400} height={50} />);
+  const itcl = (<img  src="/itcl.svg" width={163} height={25} />);
   return (
     <DefaultFooter
     style={{color:'black !important',zIndex:'1'}}
@@ -41,12 +41,12 @@ export default () => {
           href: 'https://ant.design',
           blankTarget: true,
         },
-        {
-          key: 'Ant Design',
-          title: <div><br/><img  src="/itcl.svg" width={300} height={50} /></div>,
-          href: 'https://ant.design',
-          blankTarget: true,
-        },
+        // {
+        //   key: 'Ant Design',
+        //   title: <div><br/><img  src="/itcl.svg" width={163} height={25} /></div>,
+        //   href: 'https://ant.design',
+        //   blankTarget: true,
+        // },
       ]}
     />
   );
