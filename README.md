@@ -2,6 +2,8 @@
 
 This project is initialized with [Ant Design Pro](https://pro.ant.design). Follow is the quick guide for how to use.
 
+<img src="./screencapture-localhost-8000-dashboard-monitor-2021-08-04-22_28_54.png"/>
+
 ## Environment Prepare
 
 Install `node_modules`:
